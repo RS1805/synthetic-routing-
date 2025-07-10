@@ -77,17 +77,17 @@ A modern, intelligent flight search application that discovers hidden deals and 
 - `npm run lint` - Run ESLint for code quality
 
 
-```
+
 
 ## 🔧 Configuration
-
+---
 ### Amadeus API Setup
 
 1. Register at [developers.amadeus.com](https://developers.amadeus.com)
 2. Create a new application
 3. Copy your API Key and API Secret
 4. Add them to your `.env` file
-
+---
 ### Environment Variables
 
 | Variable | Description | Required |
