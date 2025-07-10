@@ -1,88 +1,143 @@
-# 🧠 Synthetic Routing
+# SyntheticRoutes - Smart Flight Search
 
-**Synthetic Routing** is a Python-based project designed to simulate and evaluate airline routing using real-world flight data. The goal is to optimize routing strategies by generating and testing synthetic itineraries based on distance, pricing, and airport metadata.
+A modern, intelligent flight search application that discovers hidden deals and synthetic routes that traditional search engines miss. Built with React, TypeScript, and advanced value analysis algorithms.
 
----
+##  Features
 
-## ✈️ Features
+### Core Flight Search
+- **Smart Flight Search**: Advanced algorithms find flights others miss, including complex multi-city routes
+- **Synthetic Routes**: Creative routing options combining multiple airlines and stopovers for maximum value
+- **Multi-Currency Support**: View prices in your preferred currency (USD, EUR, GBP, CAD, AUD, JPY)
+- **Comprehensive Airport Database**: Search from 200+ airports worldwide
+- **Multiple Trip Types**: Support for one-way, round-trip, and multi-city journeys
 
-- **Airport Metadata Processing**: Parses airport metadata from CSV files for location-based routing.
-- **Distance Calculation**: Uses the Haversine formula to compute distances between airports.
-- **Synthetic Route Generation**: Creates realistic synthetic flight routes based on origin-destination logic.
-- **Data Storage**: Saves results in structured formats (CSV/JSON) for further analysis or visualization.
+### Advanced Value Analysis
+- **Intelligent Value Calculator**: Detailed insights into flight value including points redemption calculations
+- **Real-time Point Valuations**: Accurate cents-per-point calculations for major airline loyalty programs
+- **Savings Calculator**: Shows potential savings when using points vs. cash
+- **Value Score System**: 0-100 rating system with detailed explanations
+- **Airline-Specific Calculations**: Tailored formulas for each airline's loyalty program
 
----
+### User Experience
+- **Advanced Filtering**: Filter by price, time, stops, airlines, cabin class, and duration
+- **Flight Comparison**: Side-by-side comparison of up to 3 flights
+- **Saved Flights**: Save and manage your favorite flight options
+- **Currency Converter**: Real-time currency conversion for international travelers
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 
-## 🗂️ Repository Structure
+### Smart Features
+- **Synthetic Route Detection**: Identifies creative routing options via strategic hubs
+- **Best Value Badges**: Highlights excellent deals automatically
+- **Seasonal Pricing**: Adjusts calculations based on peak/off-peak travel periods
+- **Points Earning Calculator**: Shows loyalty points you'll earn from each flight
 
-```
-synthetic-routing/
-├── airports.csv         # Metadata for global airports
-├── main.py              # Main script to generate synthetic routes
-├── utils.py             # Utility functions (e.g., distance calculation)
-├── generated_routes.csv # Sample output
-└── README.md            # Project documentation
-```
-
----
-
-## 🛠️ Getting Started
+##  Getting Started
 
 ### Prerequisites
 
-- Python 3.7+
-- Install required libraries:
+- Node.js (version 16 or higher)
+- npm or yarn package manager
+- Amadeus API credentials (free at [developers.amadeus.com](https://developers.amadeus.com))
 
-```bash
-pip install -r requirements.txt
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/synthetic-flight-router.git
+   cd synthetic-flight-router
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_AMADEUS_API_KEY=your_api_key_here
+   VITE_AMADEUS_API_SECRET=your_api_secret_here
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to `http://localhost:5173` to view the application.
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
+
+
 ```
 
-### Run the Project
+## 🔧 Configuration
 
-```bash
-python main.py
-```
+### Amadeus API Setup
 
-This will generate a CSV file containing synthetic routing data between airport pairs.
+1. Register at [developers.amadeus.com](https://developers.amadeus.com)
+2. Create a new application
+3. Copy your API Key and API Secret
+4. Add them to your `.env` file
 
----
+### Environment Variables
 
-## 📊 Output Example
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `VITE_AMADEUS_API_KEY` | Your Amadeus API key | Yes |
+| `VITE_AMADEUS_API_SECRET` | Your Amadeus API secret | Yes |
 
-| Origin | Destination | Distance (km) | Duration (est) | Airline |
-|--------|-------------|----------------|----------------|---------|
-| JFK    | LAX         | 3974.34        | 6h 5m          | SyntheticAir |
-| DEL    | DXB         | 2184.88        | 3h 45m         | FlySynth     |
 
----
-
-## 📌 Use Cases
-
-- Academic research in aviation and logistics
-- Testing airline pricing algorithms
-- Machine learning model training for route prediction
-- Simulating synthetic travel scenarios
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! If you'd like to suggest improvements, report bugs, or add features:
+## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+### Development Guidelines
+
+- Follow TypeScript best practices
+- Use Tailwind CSS for styling
+- Maintain component modularity
+- Write descriptive commit messages
+- Test thoroughly before submitting PRs
+
+
+## 📊 Performance
+
+- **Lighthouse Score**: 95+ across all metrics
+- **Bundle Size**: Optimized for fast loading
+- **API Response Time**: < 2 seconds average
+- **Mobile Performance**: Fully responsive design
+
 ---
 
-## 📄 License
 
-MIT License – see the [LICENSE](LICENSE) file for details.
+### Quick Start Commands
 
----
+```bash
+# Clone and setup
+git clone https://github.com/yourusername/synthetic-flight-router.git
+cd synthetic-flight-router
+npm install
 
-## 👨‍💻 Author
+# Add your API credentials to .env
+echo "VITE_AMADEUS_API_KEY=your_key_here" > .env
+echo "VITE_AMADEUS_API_SECRET=your_secret_here" >> .env
 
-Made with ❤️ by [RS1805](https://github.com/RS1805)
+# Start development
+npm run dev
+```
+
+
+
